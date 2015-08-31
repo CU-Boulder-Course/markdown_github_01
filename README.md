@@ -7,5 +7,5 @@ Table of Contents
 1. [Introduction](https://github.com/kenbod/markdown_github_01/blob/master/Introduction.md)
 2. [Markdown](https://github.com/kenbod/markdown_github_01/blob/master/Markdown.md)
 3. [Markdown Basics](https://github.com/kenbod/markdown_github_01/blob/master/MarkdownBasics.md)
-3. GitHub
-4. Wrapping Up
+4. GitHub
+5. Wrapping Up

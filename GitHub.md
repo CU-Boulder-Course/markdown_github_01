@@ -33,3 +33,18 @@ I assume that you:
     * If you don’t want to type that each time, you will need to
         1. [create/upload your public key file to your GitHub profile](https://help.github.com/articles/generating-ssh-keys/), or
         2. store your [GitHub password in a credential helper](https://help.github.com/articles/caching-your-github-password-in-git/)
+
+# Linking Repositories
+
+The first thing that needs to happen to work with Github is linking a repository on your computer to one that exists on Github. There are two primary ways to do this.
+
+1. If the repo exists on GitHub and not on your computer, use the `git clone` command.
+2. If the repo exists on your computer but not on GitHub, then create an empty repo on GitHub and then upload your repo to it.
+
+Let's explore both of these scenarios.
+
+## Using the `git clone` command
+
+If the repo exists on GitHub already, then go to the repository's page on GitHub and look for the `SSH clone URL`
+
+

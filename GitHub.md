@@ -47,4 +47,13 @@ Let's explore both of these scenarios.
 
 If the repo exists on GitHub already, then go to the repository's page on GitHub and look for the `SSH clone URL`
 
+![SSH Clone URL UI](https://github.com/kenbod/markdown_github_01/blob/master/resources/GitCloneURI.png "URI for git clone")
+
+Once you have located that URI, perform the following steps:
+
+1. Copy the URI
+2. Switch to a terminal on your local machine
+3. `cd` to a directory where you want the repository to be located (`~/Projects` is one option.)
+4. Invoke the `git clone` command: `git clone <URI>` where `<URI>` is the link you copied from GitHub in step 1.
+
 

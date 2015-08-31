@@ -236,6 +236,27 @@ Thanks!
 
 <hr>
 
+## Links
 
+Markdown supports two styles of links. I’ll show you the most common style. To create a link, you indicate
+the text of the link, and then the link itself. The text goes in square brackets, the link goes in parentheses.
+You can add a link title if you want. Link titles appear as a tool-tip in web browsers when you hover over a link.
+They also increase the accessibility of your page as they can be processed by screen readers and other similar tools.
 
+<hr>
 
+### Example:
+
+```
+Check out [GitUp](http://gitup.co) for a cool way to view git repos.
+
+Check out [GitUp](http://gitup.co "It's cool!") for a cool way to view git repos.
+```
+
+### Result:
+
+Check out [GitUp](http://gitup.co) for a cool way to view git repos.
+
+Check out [GitUp](http://gitup.co "It's cool!") for a cool way to view git repos.
+
+<hr>

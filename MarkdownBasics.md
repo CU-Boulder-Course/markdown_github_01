@@ -166,3 +166,34 @@ Here's the start of a new paragraph
 3. as many as you need
 
 <hr>
+
+## Embedded Lists
+
+You can embed one list inside another, as many levels deep as you need (within reason). Just prefix each level
+with four spaces in front of the list marker. Level 1 is a normal list. Level 2 lists have four spaces at the
+start of their lines. Level 3 lists have eight spaces at the start of their lines, etc.
+
+<hr>
+
+### Example:
+
+```
+* This is a list
+    * This is an embedded list
+        1. that is indicated by adding
+        2. four spaces in front of the list marker
+    * Go as deep as you need.
+* This is the second item of the outer list
+* And this is the third item
+```
+### Result:
+
+* This is a list
+    * This is an embedded list
+        1. that is indicated by adding
+        2. four spaces in front of the list marker
+    * Go as deep as you need.
+* This is the second item of the outer list
+* And this is the third item
+
+<hr>

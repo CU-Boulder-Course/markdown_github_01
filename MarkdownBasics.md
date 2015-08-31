@@ -84,3 +84,30 @@ symbol. Blockquotes can be nested and can contain other markdown elements.
 > Here's the text of paragraph 2 in the blockquote
 
 <hr>
+
+## Emphasis
+
+To emphasize a phrase, surround it with asterisks or underscores. If you strongly want to emphasize something, then double the symbols. In HTML, the former will be translated to an **em** tag; the latter as a **strong** tag. By convention, **em** tags appear in *italics* while **strong** tags appear in **bold**.
+
+### Example:
+
+```
+I *really* want you to be there
+
+No, I _really_ do.
+
+Listen, I **really** want you to be there
+
+I'm __not__ kidding.
+```
+### Result:
+
+I *really* want you to be there
+
+No, I _really_ do.
+
+Listen, I **really** want you to be there
+
+I'm __not__ kidding.
+
+<hr>

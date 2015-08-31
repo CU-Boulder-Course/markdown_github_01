@@ -51,5 +51,6 @@ You can also use GitHub as a Markdown editor. Just:
 * 
 ## Next Steps
 
-Head to the [Markdown Basics](https://github.com/kenbod/markdown_github_01/blob/master/Markdown.md) to learn about the syntax of Markdown or head back to the [Table of Contents](https://github.com/kenbod/markdown_github_01/blob/master/README.md).
-
+Head to the [Markdown Basics](https://github.com/kenbod/markdown_github_01/blob/master/MarkdownBasics.md) to learn
+about the syntax of Markdown or head back to the
+[Table of Contents](https://github.com/kenbod/markdown_github_01/blob/master/README.md).

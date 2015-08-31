@@ -260,3 +260,29 @@ Check out [GitUp](http://gitup.co) for a cool way to view git repos.
 Check out [GitUp](http://gitup.co "It's cool!") for a cool way to view git repos.
 
 <hr>
+
+## Images
+
+Images have a similar syntax to links.
+
+`![alt text](href "title")`
+
+You start with an exclamation point (!) followed by a textual description of the image (for screen readers) and
+then the link to the image and the link's title. The textual description goes in square brackets, the link
+and link title go in parentheses.
+
+<hr>
+
+### Example:
+
+```
+![Kitties!](http://www.pluspets.net/wp-content/uploads/2011/01/Best-Cats-Photos8.jpg "So cute!")
+```
+
+### Result:
+
+![Kitties!](http://www.pluspets.net/wp-content/uploads/2011/01/Best-Cats-Photos8.jpg "So cute!")
+
+<hr>
+
+

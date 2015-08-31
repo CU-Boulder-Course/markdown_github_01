@@ -36,6 +36,51 @@ Then, change it to this URL: <http://daringfireball.net/linked/2015/08/28/panzer
 Markdown is thus a project that <q>scratched an itch</q> for John Gruber. It is an example
 of [eating your own dog food](https://en.wikipedia.org/wiki/Eating_your_own_dog_food): using your **own** software everyday.
 
+## HTML Allowed
+
+Markdown’s reason for existence is to take text and convert it to HTML. As a result, if there is something that
+HTML allows but Markdown doesn't support, just insert the HTML directly into the Markdown source. This applies to
+block level elements as well as in-line elements of HTML. See <http://daringfireball.net/projects/markdown/syntax>
+for details. For instance, the official version of Markdown does not support tables. So, in the official version of
+Markdown, if you need a table just add it using HTML's **table**, **thead**, **tbody**, **tr**, and **td** tags
+as needed to create the table. (Note: GitHub's version (or <q>flavor</q>) of Markdown does support tables.)
+
+<hr>
+
+### Example
+
+```
+This is a <a href="http://daringfireball.net/projects/markdown/">Markdown</a> paragraph
+
+<table>
+<tbody>
+<tr>
+<td>Row 1, Column 1</td>
+<td>Row 1, Column 2</td>
+</tr>
+</tbody>
+</table>
+
+This is a second Markdown paragraph
+```
+
+### Result
+
+This is a <a href="http://daringfireball.net/projects/markdown/">Markdown</a> paragraph
+
+<table>
+<tbody>
+<tr>
+<td>Row 1, Column 1</td>
+<td>Row 1, Column 2</td>
+</tr>
+</tbody>
+</table>
+
+This is a second Markdown paragraph
+
+<hr>
+
 ## Trying out the Examples
 
 Note: You can try out any of the examples shown in this lecture.
@@ -48,7 +93,8 @@ You can also use GitHub as a Markdown editor. Just:
 * Create a new repo and indicate that it should have a README.md file created automatically.
 * Edit the README.md file and put any Markdown text that you want.
 * Flip to the <q>Preview</q> tab at any point to see the Markdown rendered as HTML.
-* 
+
+ 
 ## Next Steps
 
 Head to the [Markdown Basics](https://github.com/kenbod/markdown_github_01/blob/master/MarkdownBasics.md) to learn

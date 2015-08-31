@@ -27,7 +27,7 @@ This is the start of a new paragraph.
 
 ## Headings
 
-You can specify headings in one of two ways; I’ll cover just one of them. To specify that a line
+You can specify headings in one of two ways; I'll cover just one of them. To specify that a line
 is a heading, start it with a hash mark (#). A heading line can start with 1 to 6 hash marks, corresponding
 to HTML's **h1**, **h2**, **h3**, **h4**, **h5**, and **h6** tags.
 
@@ -67,20 +67,20 @@ symbol. Blockquotes can be nested and can contain other markdown elements.
 ```
 > # This is a heading inside of a blockquote.
 >
-> Here’s the text of paragraph 1 in the blockquote
+> Here's the text of paragraph 1 in the blockquote
 >
-> > Here’s a quote within a quote
+> > Here's a quote within a quote
 >
-> Here’s the text of paragraph 2 in the blockquote
+> Here's the text of paragraph 2 in the blockquote
 ```
 ### Result:
 
 > # This is a heading inside of a blockquote.
 >
-> Here’s the text of paragraph 1 in the blockquote
+> Here's the text of paragraph 1 in the blockquote
 >
-> > Here’s a quote within a quote
+> > Here's a quote within a quote
 >
-> Here’s the text of paragraph 2 in the blockquote
+> Here's the text of paragraph 2 in the blockquote
 
 <hr>

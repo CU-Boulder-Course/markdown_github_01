@@ -285,4 +285,10 @@ and link title go in parentheses.
 
 <hr>
 
+## Next Steps
+
+That's it for our review of Markdown. There are plenty of other tutorials on the web if you want to learn more.
+
+Next up, head to the material on [GitHub](https://github.com/kenbod/markdown_github_01/blob/master/GitHub.md) or
+head back to the [Table of Contents](https://github.com/kenbod/markdown_github_01/blob/master/README.md).
 

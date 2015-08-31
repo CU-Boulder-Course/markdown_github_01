@@ -276,12 +276,12 @@ and link title go in parentheses.
 ### Example:
 
 ```
-![Kitties!](http://www.pluspets.net/wp-content/uploads/2011/01/Best-Cats-Photos8.jpg "So cute!")
+![Kitties!](https://github.com/kenbod/markdown_github_01/blob/master/resources/kitty.jpg "So cute!")
 ```
 
 ### Result:
 
-![Kitties!](http://www.pluspets.net/wp-content/uploads/2011/01/Best-Cats-Photos8.jpg "So cute!")
+![Kitties!](https://github.com/kenbod/markdown_github_01/blob/master/resources/kitty.jpg "So cute!")
 
 <hr>
 

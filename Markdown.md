@@ -81,6 +81,18 @@ This is a second Markdown paragraph
 
 <hr>
 
+## Why?
+
+Why did I present this information?
+
+Because GitHub uses Markdown everywhere and even adds new features to Markdown. What
+does [GitHub add to Markdown](https://help.github.com/articles/github-flavored-markdown/)?
+
+* URL auto-linking
+* ~~Free ponies!~~ Strikethrough text
+* Fenced code blocks and syntax highlighting
+* Tables
+
 ## Trying out the Examples
 
 Note: You can try out any of the examples shown in this lecture.

@@ -48,3 +48,8 @@ You can also use GitHub as a Markdown editor. Just:
 * Create a new repo and indicate that it should have a README.md file created automatically.
 * Edit the README.md file and put any Markdown text that you want.
 * Flip to the <q>Preview</q> tab at any point to see the Markdown rendered as HTML.
+* 
+## Next Steps
+
+Head to the [Markdown Basics](https://github.com/kenbod/markdown_github_01/blob/master/Markdown.md) to learn about the syntax of Markdown or head back to the [Table of Contents](https://github.com/kenbod/markdown_github_01/blob/master/README.md).
+

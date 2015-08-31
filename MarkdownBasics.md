@@ -89,6 +89,8 @@ symbol. Blockquotes can be nested and can contain other markdown elements.
 
 To emphasize a phrase, surround it with asterisks or underscores. If you strongly want to emphasize something, then double the symbols. In HTML, the former will be translated to an **em** tag; the latter as a **strong** tag. By convention, **em** tags appear in *italics* while **strong** tags appear in **bold**.
 
+<hr>
+
 ### Example:
 
 ```
@@ -109,5 +111,58 @@ No, I _really_ do.
 Listen, I **really** want you to be there
 
 I'm __not__ kidding.
+
+<hr>
+
+## Lists
+
+You can create two types of lists (just like in HTML). For an unordered list, start each line with an
+asterisk (*), a plus (+), or a dash (-), followed by a space and then the content of the list item. For
+ordered lists, start each line with a number followed by a period and a space. It doesn't matter what
+numbers you use, Markdown will convert it to an HTML ordered list and the browser will take care of
+actually numbering the list.
+
+<hr>
+
+### Example:
+
+```
+* This is a list
+
+* Items can have
+
+    multiple paragraphs
+    if you need them
+    just indent by four spaces
+
+    and have blank lines between items
+
+* Here's the end of the list
+
+Here's the start of a new paragraph
+
+1. Here's an ordered list that follows
+2. with multiple items
+3. as many as you need
+```
+### Result:
+
+* This is a list
+
+* Items can have
+
+    multiple paragraphs
+    if you need them
+    just indent by four spaces
+
+    and have blank lines between items
+
+* Here's the end of the list
+
+Here's the start of a new paragraph
+
+1. Here's an ordered list that follows
+2. with multiple items
+3. as many as you need
 
 <hr>

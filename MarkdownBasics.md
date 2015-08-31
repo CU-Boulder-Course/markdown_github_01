@@ -197,3 +197,45 @@ start of their lines. Level 3 lists have eight spaces at the start of their line
 * And this is the third item
 
 <hr>
+
+## Code Elements and Code Blocks
+
+You can have <q>code</q> elements either in-line or in a stand-alone block. In-line code is indicated by surrounding the word or phrase with backticks. Stand-alone code blocks are indicated by four spaces at the start of a line.
+
+<hr>
+
+### Example:
+
+```
+Be sure to call the `init()` method before you call `doMyWorkForMe()`.
+
+Also be sure to review this code for me.
+
+    def check(dir: Path) = {
+      if (!exists(dir)) {
+        error(s"Directory: <$dir> does not exist.")
+      }
+    }
+
+Thanks!
+```
+
+### Result:
+
+Be sure to call the `init()` method before you call `doMyWorkForMe()`.
+
+Also be sure to review this code for me.
+
+    def check(dir: Path) = {
+      if (!exists(dir)) {
+        error(s"Directory: <$dir> does not exist.")
+      }
+    }
+
+Thanks!
+
+<hr>
+
+
+
+

@@ -56,4 +56,10 @@ Once you have located that URI, perform the following steps:
 3. `cd` to a directory where you want the repository to be located (`~/Projects` is one option.)
 4. Invoke the `git clone` command: `git clone <URI>` where `<URI>` is the link you copied from GitHub in step 1.
 
+Here is a graphical depiction of what you did.
+
+![git clone scenario](https://github.com/kenbod/markdown_github_01/blob/master/resources/GitCloneScenario.png)
+
+
+
 

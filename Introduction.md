@@ -21,3 +21,7 @@ following technologies.
 Last Thursday and today, I presented an [introduction to `git`](http://www.cs.colorado.edu/~kena/classes/5828/f15/lectures/02-git.pdf).
 Now, let's continue and learn about Markdown and GitHub. I will then bring it all together and show
 you some example presentations. (You're looking at one now.)
+
+## Next Steps
+
+Head to the [Markdown Introduction](https://github.com/kenbod/markdown_github_01/blob/master/Markdown.md) to learn about Markdown or head back to the [Table of Contents](https://github.com/kenbod/markdown_github_01/blob/master/README.md).

@@ -5,6 +5,7 @@ This is an example repository in support of Ken Anderson's [Fall 2015 CSCI 5828 
 Table of Contents
 
 1. [Introduction](https://github.com/kenbod/markdown_github_01/blob/master/Introduction.md)
-2. Markdown
+2. [Markdown](https://github.com/kenbod/markdown_github_01/blob/master/Markdown.md)
+3. Markdown Basics
 3. GitHub
 4. Wrapping Up

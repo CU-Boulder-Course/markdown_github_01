@@ -13,7 +13,7 @@
         <div class="col-lg-3">&nbsp;</div>
         <div class="col-lg-6">
           <h1>GitHub</h1>
-          <p><img alt="Octocat" title="Github's Mascot" src="resources/Octocat.png"></p>
+          <p><img width="600" alt="Octocat" title="Github's Mascot" src="resources/Octocat.png"></p>
 
           <p>GitHub is a Web-based repository hosting service for <code>git</code>. You can upload your repositories to it and then access/manipulate them with a nice Web-based interface for many of the most common <code>git</code> commands. You can create as many public repositories as you want; you have to pay if you want to keep your repositories private. GitHub then adds new services on top of <code>git</code> that are designed for collaboration:</p>
 
@@ -55,170 +55,171 @@
                   <li>store your <a href="https://help.github.com/articles/caching-your-github-password-in-git/">GitHub password in a credential helper</a></li>
                 </ol>
               </li>
+            </ul>
             </li>
+          </ul>
 
-            <h2>Linking Repositories</h2>
+          <h2>Linking Repositories</h2>
 
-            <p>The first thing that needs to happen to work with Github is linking a repository on your computer to one that exists on Github. There are two primary ways to do this.</p>
+          <p>The first thing that needs to happen to work with Github is linking a repository on your computer to one that exists on Github. There are two primary ways to do this.</p>
 
-            <ol>
-              <li>If the repo exists on GitHub and not on your computer, use the <code>git clone</code> command.</li>
-              <li>If the repo exists on your computer but not on GitHub, then create an empty repo on GitHub and then upload your repo to it.</li>
-            </ol>
+          <ol>
+            <li>If the repo exists on GitHub and not on your computer, use the <code>git clone</code> command.</li>
+            <li>If the repo exists on your computer but not on GitHub, then create an empty repo on GitHub and then upload your repo to it.</li>
+          </ol>
 
-            <p>Let's explore both of these scenarios.</p>
+          <p>Let's explore both of these scenarios.</p>
 
-            <h2>Using the <code>git clone</code> command</h2>
+          <h2>Using the <code>git clone</code> command</h2>
 
-            <p>If the repo exists on GitHub already, then go to the repository's page on GitHub and look for the <code>SSH clone URL</code></p>
+          <p>If the repo exists on GitHub already, then go to the repository's page on GitHub and look for the <code>SSH clone URL</code></p>
 
-            <p><img src="resources/GitCloneURI.png" alt="SSH Clone URL UI" title="URI for git clone"></p>
+          <p><img src="resources/GitCloneURI.png" alt="SSH Clone URL UI" title="URI for git clone"></p>
 
-            <p>Once you have located that URI, perform the following steps:</p>
+          <p>Once you have located that URI, perform the following steps:</p>
 
+          <ul>
+            <li>Copy the URI</li>
+            <li>Switch to a terminal on your local machine</li>
+            <li><code>cd</code> to a directory where you want the repository to be located (<code>~/Projects</code> is one option.)</li>
+            <li>Invoke the <code>git clone</code> command: <code>git clone &lt;URI&gt;</code> where <code>&lt;URI&gt;</code> is the link you copied from GitHub in step 1.</li>
+          </ul>
+
+          <p>Here is a graphical depiction of what the <code>git clone</code> command does.</p>
+
+          <p><img src="resources/GitCloneScenario.png" width="600" alt="git clone scenario"></p>
+
+          <h2>The Link</h2>
+
+          <p><code>git clone</code> configures the repository to remember where it came from. You can verify this with the <code>git remote</code> command. For one of my GitHub-based repos, the <code>git remote -v</code> command lists:</p>
+
+          <pre><code>
+            origin  git@github.com:kenbod/icse2016.git (fetch)
+            origin  git@github.com:kenbod/icse2016.git (push)
+          </code></pre>
+
+          <p>This output indicates that my local repository is associated with a remote copy called <code>origin</code> (the first remote associated with a repository is called <code>origin</code> by convention) that is located on GitHub. A repository can be associated with any number of other repositories and can pull and push from any of them.</p>
+
+          <p>On a repository that has no remotes, the <code>git remote -v</code> command produces no output.</p>
+
+          <h2>Linking repositories, case 2</h2>
+
+          <p>If a repo exists on your computer but not on GitHub, then to create a copy on GitHub that can be linked to your local copy, perform the following steps:</p>
+
+          <ol>
+
+          <li>Create an empty repo on GitHub by clicking this button: <img src="resources/NewRepo.png" alt="create repo"></li>
+          <li><p>Fill out the dialog below; enter a name for the repo and skip the initialization steps that GitHub can perform.</p>
+
+          <p><img src="resources/NewRepoDialog.png" alt="new repo dialog box"></p></li>
+
+          <li><p>After the empty repository has been created, GitHub provides helpful instructions on how to establish the link:</p>
+
+          <p><img src="resources/LinkRepos.png" alt="new repo instructions"></p></li>
+
+          </ol>
+
+          <h3>Example</h3>
+
+          <p>As an example, I took the (very) simple repo I created during the Git lecture and uploaded it to GitHub. I named my new empty repo on GitHub <q>example_project</q> to match what I called the repo on my laptop. Here's what happened:</p>
+
+          <p><img width="900" src="resources/LinkingARepo.png" alt="new repo commands"></p>
+
+          <p>Things to note:</p>
+
+          <ul>
+            <li>The <code>git remote</code> command is first used to add a remote repository, then used to list our local repository’s remotes.</li>
+            <li><code>git push</code> is used to push the contents of our master branch to the remote repo <strong>AND</strong> to configure the local branch to <q>track</q> the remote</li>
+            <li><code>git branch -a</code> is used to list all branches including the ones on our remote</li>
+            <li>We have a local branch called <code>bug-fix</code> that did NOT get copied to the remote</li>
+          </ul>
+
+          <h2>Establishing the Link</h2>
+
+          <ul>
+            <li><code>git clone</code>
             <ul>
-              <li>Copy the URI</li>
-              <li>Switch to a terminal on your local machine</li>
-              <li><code>cd</code> to a directory where you want the repository to be located (<code>~/Projects</code> is one option.)</li>
-              <li>Invoke the <code>git clone</code> command: <code>git clone &lt;URI&gt;</code> where <code>&lt;URI&gt;</code> is the link you copied from GitHub in step 1.</li>
+              <li>When you clone a repository, it automatically creates a local branch for each remote branch and sets up a <q>tracking relationship</q> between them.</li>
+              <li>A local branch that <q>tracks</q> a remote branch will allow <code>git pull</code> commands to copy commits from the remote branch that were added in some other way (typically by being pushed to that branch by one of your collaborators)</li>
             </ul>
-
-            <p>Here is a graphical depiction of what the <code>git clone</code> command does.</p>
-
-            <p><img src="resources/GitCloneScenario.png" alt="git clone scenario"></p>
-
-            <h2>The Link</h2>
-
-            <p><code>git clone</code> configures the repository to remember where it came from. You can verify this with the <code>git remote</code> command. For one of my GitHub-based repos, the <code>git remote -v</code> command lists:</p>
-
-            <pre><code>
-              origin  git@github.com:kenbod/icse2016.git (fetch)
-              origin  git@github.com:kenbod/icse2016.git (push)
-            </code></pre>
-
-            <p>This output indicates that my local repository is associated with a remote copy called <code>origin</code> (the first remote associated with a repository is called <code>origin</code> by convention) that is located on GitHub. A repository can be associated with any number of other repositories and can pull and push from any of them.</p>
-
-            <p>On a repository that has no remotes, the <code>git remote -v</code> command produces no output.</p>
-
-            <h2>Linking repositories, case 2</h2>
-
-            <p>If a repo exists on your computer but not on GitHub, then to create a copy on GitHub that can be linked to your local copy, perform the following steps:</p>
-
-            <ol>
-
-            <li>Create an empty repo on GitHub by clicking this button: <img src="resources/NewRepo.png" alt="create repo"></li>
-            <li><p>Fill out the dialog below; enter a name for the repo and skip the initialization steps that GitHub can perform.</p>
-
-            <p><img src="resources/NewRepoDialog.png" alt="new repo dialog box"></p></li>
-
-            <li><p>After the empty repository has been created, GitHub provides helpful instructions on how to establish the link:</p>
-
-            <p><img src="resources/LinkRepos.png" alt="new repo instructions"></p></li>
-
-            </ol>
-
-            <h3>Example</h3>
-
-            <p>As an example, I took the (very) simple repo I created during the Git lecture and uploaded it to GitHub. I named my new empty repo on GitHub <q>example_project</q> to match what I called the repo on my laptop. Here's what happened:</p>
-
-            <p><img src="resources/LinkingARepo.png" alt="new repo commands"></p>
-
-            <p>Things to note:</p>
-
-            <ul>
-              <li>The <code>git remote</code> command is first used to add a remote repository, then used to list our local repository’s remotes.</li>
-              <li><code>git push</code> is used to push the contents of our master branch to the remote repo <strong>AND</strong> to configure the local branch to <q>track</q> the remote</li>
-              <li><code>git branch -a</code> is used to list all branches including the ones on our remote</li>
-              <li>We have a local branch called <code>bug-fix</code> that did NOT get copied to the remote</li>
-            </ul>
-
-            <h2>Establishing the Link</h2>
-
-            <ul>
-              <li><code>git clone</code>
-              <ul>
-                <li>When you clone a repository, it automatically creates a local branch for each remote branch and sets up a <q>tracking relationship</q> between them.</li>
-                <li>A local branch that <q>tracks</q> a remote branch will allow <code>git pull</code> commands to copy commits from the remote branch that were added in some other way (typically by being pushed to that branch by one of your collaborators)</li>
-              </ul>
             </li>
             <li><code>git push -u &lt;repo&gt; &lt;refspec&gt;</code>
-              <ul>
-                <li>This is the other way to establish a link between a local branch and a remote one; in this case, you're simultaneously pushing the contents of a local branch (thus creating the branch on the remote repository) and setting up the tracking relationship</li>
-              </ul>
+            <ul>
+              <li>This is the other way to establish a link between a local branch and a remote one; in this case, you're simultaneously pushing the contents of a local branch (thus creating the branch on the remote repository) and setting up the tracking relationship</li>
+            </ul>
             </li>
+          </ul>
 
-            <h2><code>git push</code></h2>
+          <h2><code>git push</code></h2>
 
-            <p>We are just scraping the surface of the <code>git push</code> command. The generic form of the command is:</p>
+          <p>We are just scraping the surface of the <code>git push</code> command. The generic form of the command is:</p>
 
-            <pre><code>
-            git push &lt;options&gt; &lt;repo&gt; &lt;refspec&gt;
-            </code></pre>
+          <pre><code>
+          git push &lt;options&gt; &lt;repo&gt; &lt;refspec&gt;
+          </code></pre>
 
-            <p>The <code>&lt;repo&gt;</code> argument ALWAYS refers to a remote repository. If you don’t specify it, then <code>origin</code> is assumed.</p>
+          <p>The <code>&lt;repo&gt;</code> argument ALWAYS refers to a remote repository. If you don’t specify it, then <code>origin</code> is assumed.</p>
 
-            <p>The <code>&lt;refspec&gt;</code> argument is a placeholder for this beast: <code>(+)&lt;src_ref&gt;:&lt;dst_ref&gt;</code></p>
+          <p>The <code>&lt;refspec&gt;</code> argument is a placeholder for this beast: <code>(+)&lt;src_ref&gt;:&lt;dst_ref&gt;</code></p>
 
-            <ul>
-              <li><code>src_ref</code> is a refspec that references your local repo; <code>dst_ref</code> is for the remote</li>
-              <li>If you just list a single branch name (like we did), it is short for <code>&lt;src_branch&gt;:&lt;dst_branch&gt;</code> or, in our case, <code>master:master</code></li>
-              <li>If you don’t specify the <code>&lt;refspec&gt;</code>, your current branch is assumed</li>
-            </ul>
+          <ul>
+            <li><code>src_ref</code> is a refspec that references your local repo; <code>dst_ref</code> is for the remote</li>
+            <li>If you just list a single branch name (like we did), it is short for <code>&lt;src_branch&gt;:&lt;dst_branch&gt;</code> or, in our case, <code>master:master</code></li>
+            <li>If you don’t specify the <code>&lt;refspec&gt;</code>, your current branch is assumed</li>
+          </ul>
 
-            <p>Putting it all together</p>
+          <p>Putting it all together</p>
 
-            <pre><code>
-            git push -u origin master
-            </code></pre>
+          <pre><code>
+          git push -u origin master
+          </code></pre>
 
-            <ul>
-              <li>This command means that we want to push the contents of the <code>master</code> branch of MY repository to the <code>master</code> branch of the remote repository (creating the branch, if needed) AND set up a tracking relationship between them.</li>
-              <li><p>After we set-up the tracking relationship, we can push new commits to the remote copy of the master branch using any of these commands</p>
+          <p>This command means that we want to push the contents of the <code>master</code> branch of MY repository to the <code>master</code> branch of the remote repository (creating the branch, if needed) AND set up a tracking relationship between them.</p>
 
-              <p><pre><code>
-              git push origin master:master
-              git push origin master
-              git push
-              </code></pre></p>
-              </li>
+          <p>After we set-up the tracking relationship, we can push new commits to the remote copy of the master branch using any of these commands</p>
 
-              <li>The last command assumes that your current branch is <code>master</code>.</li>
-            </ul>
+          <pre><code>
+          git push origin master:master
+          git push origin master
+          git push
+          </code></pre>
 
-            <h2>Pull before you Push</h2>
+          <p>The last command assumes that your current branch is <code>master</code>.</p>
 
-            <p>If you have new commits that you want to push to the remote but someone else already pushed THEIR new commits to the remote, you will need to pull them in first using ANY of these commands:</p>
+          <h2>Pull before you Push</h2>
 
-            <pre><code>
-            git pull origin master
-            git pull
-            </code></pre>
+          <p>If you have new commits that you want to push to the remote but someone else already pushed THEIR new commits to the remote, you will need to pull them in first using ANY of these commands:</p>
 
-            <p><code>git pull</code> is a <q>short cut</q> in that it does the following:</p>
+          <pre><code>
+          git pull origin master
+          git pull
+          </code></pre>
 
-            <ul>
-              <li>git fetch &lt;args&gt;: pulling down the latest info about the remote</li>
-              <li>git merge &lt;remote-branch&gt;: this merges the changes of the remote branch into your current local branch</li>
-            </ul>
+          <p><code>git pull</code> is a <q>short cut</q> in that it does the following:</p>
 
-            <p>As a result, if you just want to pull changes from the remote repository but not modify any of your branches just yet, you can just issue a <code>git fetch</code> command and then do any merging into branches yourself.</p>
+          <ul>
+            <li>git fetch &lt;args&gt;: pulling down the latest info about the remote</li>
+            <li>git merge &lt;remote-branch&gt;: this merges the changes of the remote branch into your current local branch</li>
+          </ul>
 
-            <p>Regardless, once you have pulled, you can resolve any conflicts that might have popped up and then you can push your own commits to the remote branch</p>
+          <p>As a result, if you just want to pull changes from the remote repository but not modify any of your branches just yet, you can just issue a <code>git fetch</code> command and then do any merging into branches yourself.</p>
 
-            <p>Finally, going back to our example, if we want our <code>bug-fix</code> branch from our local repository to be stored on the remote, then we can just push it using the same command that we did before. Here's how:</p>
+          <p>Regardless, once you have pulled, you can resolve any conflicts that might have popped up and then you can push your own commits to the remote branch</p>
 
-            <code><pre>
-            git checkout bug-fix
-            git push                   &lt;== fails, because remote branch doesn’t exist yet
-            git push -u origin bug-fix &lt;== works!
-            </pre></code>
+          <p>Finally, going back to our example, if we want our <code>bug-fix</code> branch from our local repository to be stored on the remote, then we can just push it using the same command that we did before. Here's how:</p>
 
-            <h2>Next Steps</h2>
+          <code><pre>
+          git checkout bug-fix
+          git push &lt;== fails, because remote branch doesn’t exist yet
+          git push -u origin bug-fix &lt;== works!
+          </pre></code>
 
-            <p>That's it for our review of GitHub.</p>
+          <h2>Next Steps</h2>
 
-            <p>Next up, head to the material on <a href="strategies.html">Strategies for GitHub Presentations</a> or
-            head back to the <a href="index.html">Table of Contents</a>.</p>
+          <p>That's it for our review of GitHub.</p>
+
+          <p>Next up, head to the material on <a href="strategies.html">Strategies for GitHub Presentations</a> or
+          head back to the <a href="index.html">Table of Contents</a>.</p>
         </div>
         <div class="col-lg-3">&nbsp;</div>
       </div>

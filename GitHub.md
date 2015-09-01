@@ -111,7 +111,20 @@ Things to note:
     simultaneously pushing the contents of a local branch (thus creating the branch on the remote repository) and
     setting up the tracking relationship
 
+## `git push`
 
+We are just scraping the surface of the `git push` command. The generic form of the command is:
+
+    git push <options> <repo> <refspec>
+
+The `<repo>` argument ALWAYS refers to a remote repository. If you don’t specify it, then `origin` is assumed.
+
+The `<refspec>` argument is a placeholder for this beast: `(+)<src_ref>:<dst_ref>`
+
+* `src_ref` is a refspec that references your local repo; `dst_ref` is for the remote
+* If you just list a single branch name (like we did), it is short for `<src_branch>:<dst_branch>` or,
+in our case, `master:master`
+* If you don’t specify the `<refspec>`, your current branch is assumed
 
 
 

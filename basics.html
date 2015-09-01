@@ -1,14 +1,27 @@
-# The Basics
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Markdown &amp; GitHub</title>
+    <link href="lib/css/bootstrap.css" rel="stylesheet">
+    <link href="lib/css/bootstrap-theme.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3">&nbsp;</div>
+        <div class="col-lg-6">
+<h1>The Basics</h1>
 In this section, we present the syntax of Markdown.
 
-## Paragraphs
+<h2>Paragraphs</h2>
 
 A paragraph is one or more consecutive lines of text. To create a new paragraph, separate it from the previous paragraph with a blank line. When converting to HTML, the text of the paragraph is wrapped in a **p** tag.
 
 <hr>
 
-### Example:
+<h3>Example:</h3>
 
 ```
 This is a paragraph in Markdown format.
@@ -16,7 +29,7 @@ This line will be merged with the previous one.
 
 This is the start of a new paragraph.
 ```
-### Result:
+<h3>Result:</h3>
 
 This is a paragraph in Markdown format.
 This line will be merged with the previous one.
@@ -25,7 +38,7 @@ This is the start of a new paragraph.
 
 <hr>
 
-## Headings
+<h2>Headings</h2>
 
 You can specify headings in one of two ways; I'll cover just one of them. To specify that a line
 is a heading, start it with a hash mark (#). A heading line can start with 1 to 6 hash marks, corresponding
@@ -33,28 +46,29 @@ to HTML's **h1**, **h2**, **h3**, **h4**, **h5**, and **h6** tags.
 
 <hr>
 
-### Example:
+<h3>Example:</h3>
 
-```
+<pre><code>
 # Heading 1
 ## Heading 2
 ### Heading 3
 #### Heading 4
 ##### Heading 5
 ###### Heading 6
-```
-### Result:
+</code></pre>
 
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
+<h3>Result:</h3>
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
 
 <hr>
 
-## Blockquotes
+<h2>Blockquotes</h2>
 
 If you need to indicate a quotation in your document, use the notation that has been used in
 plain-text e-mail since the dawn of time. That is, start each line with a <q>greater than</q> (>)
@@ -62,9 +76,9 @@ symbol. Blockquotes can be nested and can contain other markdown elements.
 
 <hr>
 
-### Example:
+<h3>Example:</h3>
 
-```
+<pre><code>
 > # This is a heading inside of a blockquote.
 >
 > Here's the text of paragraph 1 in the blockquote
@@ -72,26 +86,33 @@ symbol. Blockquotes can be nested and can contain other markdown elements.
 > > Here's a quote within a quote
 >
 > Here's the text of paragraph 2 in the blockquote
-```
-### Result:
+</code></pre>
 
-> # This is a heading inside of a blockquote.
->
-> Here's the text of paragraph 1 in the blockquote
->
-> > Here's a quote within a quote
->
-> Here's the text of paragraph 2 in the blockquote
+<h3>Result:</h3>
+
+<blockquote>
+
+<h1>This is a heading inside of a blockquote.</h1>
+
+<p>Here's the text of paragraph 1 in the blockquote</p>
+
+<blockquote>
+<p>Here's a quote within a quote</p>
+</blockquote>
+
+<p>Here's the text of paragraph 2 in the blockquote</p>
+
+</blockquote>
 
 <hr>
 
-## Emphasis
+<h2>Emphasis</h2>
 
 To emphasize a phrase, surround it with asterisks or underscores. If you strongly want to emphasize something, then double the symbols. In HTML, the former will be translated to an **em** tag; the latter as a **strong** tag. By convention, **em** tags appear in *italics* while **strong** tags appear in **bold**.
 
 <hr>
 
-### Example:
+<h3>Example:</h3>
 
 ```
 I *really* want you to be there
@@ -102,7 +123,7 @@ Listen, I **really** want you to be there
 
 I'm __not__ kidding.
 ```
-### Result:
+<h3>Result:</h3>
 
 I *really* want you to be there
 
@@ -114,7 +135,7 @@ I'm __not__ kidding.
 
 <hr>
 
-## Lists
+<h2>Lists</h2>
 
 You can create two types of lists (just like in HTML). For an unordered list, start each line with an
 asterisk (*), a plus (+), or a dash (-), followed by a space and then the content of the list item. For
@@ -124,7 +145,7 @@ actually numbering the list.
 
 <hr>
 
-### Example:
+<h3>Example:</h3>
 
 ```
 * This is a list
@@ -145,7 +166,7 @@ Here's the start of a new paragraph
 2. with multiple items
 3. as many as you need
 ```
-### Result:
+<h3>Result:</h3>
 
 * This is a list
 
@@ -167,7 +188,7 @@ Here's the start of a new paragraph
 
 <hr>
 
-## Embedded Lists
+<h2>Embedded Lists</h2>
 
 You can embed one list inside another, as many levels deep as you need (within reason). Just prefix each level
 with four spaces in front of the list marker. Level 1 is a normal list. Level 2 lists have four spaces at the
@@ -175,7 +196,7 @@ start of their lines. Level 3 lists have eight spaces at the start of their line
 
 <hr>
 
-### Example:
+<h3>Example:</h3>
 
 ```
 * This is a list
@@ -186,7 +207,7 @@ start of their lines. Level 3 lists have eight spaces at the start of their line
 * This is the second item of the outer list
 * And this is the third item
 ```
-### Result:
+<h3>Result:</h3>
 
 * This is a list
     * This is an embedded list
@@ -198,13 +219,13 @@ start of their lines. Level 3 lists have eight spaces at the start of their line
 
 <hr>
 
-## Code Elements and Code Blocks
+<h2>Code Elements and Code Blocks</h2>
 
 You can have <q>code</q> elements either in-line or in a stand-alone block. In-line code is indicated by surrounding the word or phrase with backticks. Stand-alone code blocks are indicated by four spaces at the start of a line.
 
 <hr>
 
-### Example:
+<h3>Example:</h3>
 
 ```
 Be sure to call the `init()` method before you call `doMyWorkForMe()`.
@@ -220,7 +241,7 @@ Also be sure to review this code for me.
 Thanks!
 ```
 
-### Result:
+<h3>Result:</h3>
 
 Be sure to call the `init()` method before you call `doMyWorkForMe()`.
 
@@ -236,7 +257,7 @@ Thanks!
 
 <hr>
 
-## Links
+<h2>Links</h2>
 
 Markdown supports two styles of links. I’ll show you the most common style. To create a link, you indicate
 the text of the link, and then the link itself. The text goes in square brackets, the link goes in parentheses.
@@ -245,7 +266,7 @@ They also increase the accessibility of your page as they can be processed by sc
 
 <hr>
 
-### Example:
+<h3>Example:</h3>
 
 ```
 Check out [GitUp](http://gitup.co) for a cool way to view git repos.
@@ -253,42 +274,50 @@ Check out [GitUp](http://gitup.co) for a cool way to view git repos.
 Check out [GitUp](http://gitup.co "It's cool!") for a cool way to view git repos.
 ```
 
-### Result:
+<h3>Result:</h3>
 
-Check out [GitUp](http://gitup.co) for a cool way to view git repos.
+<p>Check out <a href="http://gitup.co">GitUp</a> for a cool way to view git repos.</p>
 
-Check out [GitUp](http://gitup.co "It's cool!") for a cool way to view git repos.
-
-<hr>
-
-## Images
-
-Images have a similar syntax to links.
-
-`![alt text](href "title")`
-
-You start with an exclamation point (!) followed by a textual description of the image (for screen readers) and
-then the link to the image and the link's title. The textual description goes in square brackets, the link
-and link title go in parentheses.
+<p>Check out <a href="http://gitup.co" title="It's cool!">GitUp</a> for a cool way to view git repos.</p>
 
 <hr>
 
-### Example:
+<h2>Images</h2>
 
-```
+<p>Images have a similar syntax to links.</p>
+
+<pre><code>
+![alt text](href "title")
+</code></pre>
+
+<p>You start with an exclamation point (!) followed by a textual description of the image (for screen readers) and then the link to the image and the link's title. The textual description goes in square brackets, the link
+and link title go in parentheses.</p>
+
+<hr>
+
+<h3>Example:</h3>
+
+<pre><code>
 ![Kitties!](https://github.com/kenbod/markdown_github_01/blob/master/resources/kitty.jpg "So cute!")
-```
+</code></pre>
 
-### Result:
+<h3>Result:</h3>
 
-![Kitties!](https://github.com/kenbod/markdown_github_01/blob/master/resources/kitty.jpg "So cute!")
+<p><img src="resources/kitty.jpg" alt="Kitties!" title="So cute!"></p>
 
 <hr>
 
-## Next Steps
+<h2>Next Steps</h2>
 
-That's it for our review of Markdown. There are plenty of other tutorials on the web if you want to learn more.
+<p>That's it for our review of Markdown. There are plenty of other tutorials on the web if you want to learn more.</p>
 
-Next up, head to the material on [GitHub](https://github.com/kenbod/markdown_github_01/blob/master/GitHub.md) or
-head back to the [Table of Contents](https://github.com/kenbod/markdown_github_01/blob/master/README.md).
+<p>Next up, head to the material on <a href="github.html">GitHub</a> or head back to the <a href="index.html">Table of Contents</a>.</p>
+        </div>
+        <div class="col-lg-3">&nbsp;</div>
+      </div>
+    </div>
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+  </body>
+</html>
 

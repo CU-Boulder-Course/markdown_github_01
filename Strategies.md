@@ -23,7 +23,7 @@ If your presentation has no code but lots of text and images, then you can creat
 To take advantage of this functionality, follow these (high-level) steps:
 
 * create a new repo and associate it with GitHub
-* `git checkout -b gh-pages` (you will never use the `master` branch again)
+* `git checkout --orphan gh-pages` (you will never use the `master` branch again)
 * add HTML, CSS, and Javascript to your repo
 * `git push -u origin gh-pages`
 
@@ -48,15 +48,17 @@ To take advantage of this approach, follow these (high-level) steps:
 
 1. create a new repo and associate it with GitHub
 2. on the `master` branch, fill it with code and markdown files
-3. `git checkout -b gh-pages`
-4. `git rm <everything>`; `git commit`
+3. `git checkout --orphan gh-pages`
+4. `git rm -rf .`; `git commit`
 5. Now, fill the `gh-pages` branch with HTML, CSS, and Javascript
 6. Switch between the two branches to work on code (`master`) and your website (`gh-pages`) until done
 7. `git push` frequently to view repo/website as it evolves on GitHub
 
-Note: step 4 creates an empty working directory on the gh-pages branch. It will consist of multiple calls to the `git rm` command until everything in the working directory has been deleted, followed by a `git commit` to give the `gh-pages` branch a new starting point.
+Note: step 4 creates an empty working directory on a new <q>orphan branch</q>, simply a branch that has no parent commit and sits separate from the rest of the branches in your repo.
 
 This might seem scary, but it's not. All of those files are safe on the `master` branch. Just enter `git checkout master` to see them again and then `git checkout gh-pages` to go back to the empty directory so you can start working on your website.
+
+Note: The `git rm -fm .` command is not necessary if you have a set of Markdown files in your `master` branch and you want to have GitHub convert them to HTML for your website. You can make use of GitHub's support for [Jekyll](https://help.github.com/articles/using-jekyll-with-pages/) to create a website that consists completely of Markdown source files. Unfortunately, I don't have time to discuss this approach but perhaps a student will create a presentation on this technique for creating websites in GitHub.
 
 ## Examples
 

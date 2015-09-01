@@ -72,3 +72,8 @@ Option 2: https://kenbod.github.io/markdown_github_01
 
 A <q>code heavy</q> example is left as an exercise for the reader.
 
+## Next Steps
+
+Next up, head to the [Wrapping Up](https://github.com/kenbod/markdown_github_01/blob/master/Strategies.md) page or
+head back to the [Table of Contents](https://github.com/kenbod/markdown_github_01/blob/master/README.md).
+

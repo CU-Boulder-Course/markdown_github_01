@@ -56,9 +56,50 @@ Once you have located that URI, perform the following steps:
 3. `cd` to a directory where you want the repository to be located (`~/Projects` is one option.)
 4. Invoke the `git clone` command: `git clone <URI>` where `<URI>` is the link you copied from GitHub in step 1.
 
-Here is a graphical depiction of what you did.
+Here is a graphical depiction of what the `git clone` command does.
 
 ![git clone scenario](https://github.com/kenbod/markdown_github_01/blob/master/resources/GitCloneScenario.png)
+
+## The Link
+
+`git clone` configures the repository to remember where it came from. You can verify this with the `git remote` command. For one of my GitHub-based repos, the `git remote -v` command lists:
+
+```
+origin	git@github.com:kenbod/icse2016.git (fetch)
+origin	git@github.com:kenbod/icse2016.git (push)
+```
+
+This output indicates that my local repository is associated with a remote copy called `origin` (the first remote associated with a repository is called `origin` by convention) that is located on GitHub. A repository can be associated with any number of other repositories and can pull and push from any of them.
+
+On a repository that has no remotes, the `git remote -v` command produces no output.
+
+## Linking repositories, case 2
+
+If a repo exists on your computer but not on GitHub, then to create a copy on GitHub that can be linked to your local copy, perform the following steps:
+
+1. Create an empty repo on GitHub by clicking this button: ![create repo](https://github.com/kenbod/markdown_github_01/blob/master/resources/NewRepo.png).
+2. Fill out the dialog below; enter a name for the repo and skip the initialization steps that GitHub can perform.
+
+    ![new repo dialog box](https://github.com/kenbod/markdown_github_01/blob/master/resources/NewRepoDialog.png)
+    
+3. After the empty repository has been created, GitHub provides helpful instructions on how to establish the link:
+
+    ![new repo instructions](https://github.com/kenbod/markdown_github_01/blob/master/resources/LinkRepos.png)
+
+### Example
+
+As an example, I took the (very) simple repo I created during the Git lecture and uploaded it to GitHub. I named my new empty repo on GitHub "example_project" to match what I called the repo on my laptop. Here's what happened:
+
+![new repo commands](https://github.com/kenbod/markdown_github_01/blob/master/resources/LinkingARepo.png)
+
+Things to note:
+
+* The `git remote` command is first used to add a remote repository, then used to list our local repository’s remotes.
+* `git push` is used to push the contents of our master branch to the remote repo **AND** to configure the local branch to <q>track</q> the remote
+* `git branch -a` is used to list all branches including the ones on our remote
+* We have a local branch called “bug-fix” that did NOT get copied to the remote
+
+
 
 
 

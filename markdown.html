@@ -1,114 +1,110 @@
-# Markdown
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Markdown &amp; GitHub</title>
+    <link href="lib/css/bootstrap.css" rel="stylesheet">
+    <link href="lib/css/bootstrap-theme.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3">&nbsp;</div>
+        <div class="col-lg-6">
+          <h1>Markdown</h1>
 
-Markdown is a mark-up language created by John Gruber in 2004. The spec has been available from his website,
-[Daring Fireball](http://daringfireball.net/), ever since:
+          <p>Markdown is a mark-up language created by John Gruber in 2004. The spec has been available from his website, <a href="http://daringfireball.net/">Daring Fireball</a>, ever since:</p>
 
-* Markdown Specification: <http://daringfireball.net/projects/markdown/>
+          <ul>
+            <li>Markdown Specification: &lt;<a href="http://daringfireball.net/projects/markdown/">http://daringfireball.net/projects/markdown/</a>
+          </ul>
 
-He describes Markdown like this:
+          <p>He describes Markdown like this:</p>
 
-> Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write
-> using an easy-to-read, easy-to-write plain text format, then convert it to structurally
-> valid XHTML (or HTML).
+          <blockquote>
+            <p>Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).</p>
 
-> Thus, <q>Markdown</q> is two things: (1) a plain text formatting syntax; and &hellip;
+            <p>Thus, <q>Markdown</q> is two things: (1) a plain text formatting syntax; and &hellip;</p>
 
-> The overriding design goal for Markdown’s formatting syntax is to make it as readable as
-> possible. The idea is that a Markdown-formatted document should be publishable as-is, as
-> plain text, without looking like it's been marked up with tags or formatting instructions.
-> While Markdown's syntax has been influenced by several existing text-to-HTML filters, the
-> single biggest source of inspiration for Markdown’s syntax is the format of plain text email.
+            <p>The overriding design goal for Markdown's formatting syntax is to make it as readable as possible. The idea is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it's been marked up with tags or formatting instructions. While Markdown's syntax has been influenced by several existing text-to-HTML filters, the single biggest source of inspiration for Markdown’s syntax is the format of plain text email.</p>
+          </blockquote>
+          <h2>Markdown is Everywhere</h2>
+          <p>Markdown proved to be very popular. Support for it has popped up in all sorts of places. There are <a href="http://www.markdownpad.com">dedicated</a> <a href="https://stackedit.io">markdown</a> <a href="https://ia.net/writer/mac/">editors</a> and <a href="https://help.github.com/articles/writing-on-github/">GitHub uses it extensively</a>. Finally, there are many blogging systems that will accept markdown-formatted articles and convert them to HTML automatically.</p>
+          <p>Indeed, <strong>all</strong> of the Daring Fireball website is written in Markdown.</p>
+          <p>For instance, go to this URL: &lt;<a href="http://daringfireball.net/linked/2015/08/28/panzerino-twotter">http://daringfireball.net/linked/2015/08/28/panzerino-twotter</a>&gt;</p>
 
-## Markdown is Everywhere
+          <p>Then, change it to this URL: &lt;<a href="http://daringfireball.net/linked/2015/08/28/panzerino-twotter.text">http://daringfireball.net/linked/2015/08/28/panzerino-twotter.text</a>&gt;</p>
 
-Markdown proved to be very popular. Support for it has popped up in all sorts of places.
-There are [dedicated](http://www.markdownpad.com) [markdown](https://stackedit.io) [editors](https://ia.net/writer/mac/)
-and [GitHub uses it extensively](https://help.github.com/articles/writing-on-github/).
-Finally, there are many blogging systems that will accept markdown-formatted articles and convert them to
-HTML automatically.
+          <p>Markdown is thus a project that <q>scratched an itch</q> for John Gruber. It is an example of <a href="https://en.wikipedia.org/wiki/Eating_your_own_dog_food">eating your own dog food</a>: using your <strong>own</strong> software everyday.</p>
 
-Indeed, **all** of the Daring Fireball website is written in Markdown.
+          <h2>HTML Allowed</h2>
 
-For instance, go to this URL: <http://daringfireball.net/linked/2015/08/28/panzerino-twotter>
+          <p>Markdown's reason for existence is to take text and convert it to HTML. As a result, if there is something that HTML allows but Markdown doesn't support, just insert the HTML directly into the Markdown source. This applies to block level elements as well as in-line elements of HTML. See &lt;<a href="http://daringfireball.net/projects/markdown/syntax">http://daringfireball.net/projects/markdown/syntax</a>&gt; for details. For instance, the official version of Markdown does not support tables. So, in the official version of Markdown, if you need a table just add it using HTML's <strong>table</strong>, <strong>thead</strong>, <strong>tbody</strong>, <strong>tr</strong>, and <strong>td</strong> tags as needed to create the table. (Note: GitHub's version (or <q>flavor</q>) of Markdown does support tables.)</p>
+          <hr>
+          <h3>Example</h3>
+          <code><pre>
+          This is a [Markdown](http://daringfireball.net/projects/markdown/) paragraph
 
-Then, change it to this URL: <http://daringfireball.net/linked/2015/08/28/panzerino-twotter.text>
+          &lt;table&gt;
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;td&gt;Row 1, Column 1&lt;/td&gt;
+                &lt;td&gt;Row 1, Column 2&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
 
-Markdown is thus a project that <q>scratched an itch</q> for John Gruber. It is an example
-of [eating your own dog food](https://en.wikipedia.org/wiki/Eating_your_own_dog_food): using your **own** software everyday.
+          This is a second Markdown paragraph
+          </pre></code>
+          <h3>Result</h3>
+          <p>This is a <a href="http://daringfireball.net/projects/markdown/">Markdown</a> paragraph</p>
+          <table>
+            <tbody>
+              <tr>
+                <td>Row 1, Column 1</td>
+                <td>Row 1, Column 2</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>This is a second Markdown paragraph</p>
+          <hr>
+          <h2>Why?</h2>
 
-## HTML Allowed
+          <p>Why did I present this information?</p>
 
-Markdown’s reason for existence is to take text and convert it to HTML. As a result, if there is something that
-HTML allows but Markdown doesn't support, just insert the HTML directly into the Markdown source. This applies to
-block level elements as well as in-line elements of HTML. See <http://daringfireball.net/projects/markdown/syntax>
-for details. For instance, the official version of Markdown does not support tables. So, in the official version of
-Markdown, if you need a table just add it using HTML's **table**, **thead**, **tbody**, **tr**, and **td** tags
-as needed to create the table. (Note: GitHub's version (or <q>flavor</q>) of Markdown does support tables.)
+          <p>Because GitHub uses Markdown everywhere and even adds new features to Markdown. What does <a href="https://help.github.com/articles/github-flavored-markdown/">GitHub add to Markdown</a>?</p>
 
-<hr>
+          <ul>
+            <li>URL auto-linking</li>
+            <li><s>Free ponies!</s> Strikethrough text</li>
+            <li>Fenced code blocks and syntax highlighting</li>
+            <li>Tables</li>
+          </ul>
 
-### Example
+          <h2>Trying out the Examples</h2>
 
-```
-This is a <a href="http://daringfireball.net/projects/markdown/">Markdown</a> paragraph
+          <p>Note: You can try out any of the examples shown in this lecture.</p>
 
-<table>
-<tbody>
-<tr>
-<td>Row 1, Column 1</td>
-<td>Row 1, Column 2</td>
-</tr>
-</tbody>
-</table>
+          <p>Head to: &lt;http://daringfireball.net/projects/markdown/dingus&gt; and then cut-and-paste the example text into the <q>dingus</q> and click on the <code>convert</code> button.</p>
 
-This is a second Markdown paragraph
-```
+          <p>You can also use GitHub as a Markdown editor. Just:</p>
 
-### Result
+          <ul>
+            <li>Create a new repo and indicate that it should have a README.md file created automatically.</li>
+            <li>Edit the README.md file and put any Markdown text that you want.</li>
+            <li>Flip to the <q>Preview</q> tab at any point to see the Markdown rendered as HTML.</li>
+          </ul>
 
-This is a <a href="http://daringfireball.net/projects/markdown/">Markdown</a> paragraph
+          <h2>Next Steps</h2>
 
-<table>
-<tbody>
-<tr>
-<td>Row 1, Column 1</td>
-<td>Row 1, Column 2</td>
-</tr>
-</tbody>
-</table>
+          <p>Head to the <a href="basics.html">Markdown Basics</a> to learn about the syntax of Markdown or head back to the <a href="index.html">Table of Contents</a>.</p>
 
-This is a second Markdown paragraph
-
-<hr>
-
-## Why?
-
-Why did I present this information?
-
-Because GitHub uses Markdown everywhere and even adds new features to Markdown. What
-does [GitHub add to Markdown](https://help.github.com/articles/github-flavored-markdown/)?
-
-* URL auto-linking
-* ~~Free ponies!~~ Strikethrough text
-* Fenced code blocks and syntax highlighting
-* Tables
-
-## Trying out the Examples
-
-Note: You can try out any of the examples shown in this lecture.
-
-Head to: <http://daringfireball.net/projects/markdown/dingus> and then cut-and-paste the example text
-into the <q>dingus</q> and click on the `convert` button.
-
-You can also use GitHub as a Markdown editor. Just:
-
-* Create a new repo and indicate that it should have a README.md file created automatically.
-* Edit the README.md file and put any Markdown text that you want.
-* Flip to the <q>Preview</q> tab at any point to see the Markdown rendered as HTML.
-
- 
-## Next Steps
-
-Head to the [Markdown Basics](https://github.com/kenbod/markdown_github_01/blob/master/MarkdownBasics.md) to learn
-about the syntax of Markdown or head back to the
-[Table of Contents](https://github.com/kenbod/markdown_github_01/blob/master/README.md).
+        </div>
+        <div class="col-lg-3">&nbsp;</div>
+      </div>
+    </div>
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+  </body>
+</html>

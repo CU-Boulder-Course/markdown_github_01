@@ -164,3 +164,11 @@ Finally, going back to our example, if we want our `bug-fix` branch from our loc
     git checkout bug-fix
     git push                   <== fails, because remote branch doesn’t exist yet
     git push -u origin bug-fix <== works!
+
+## Next Steps
+
+That's it for our review of GitHub.
+
+Next up, head to the material on [Strategies for GitHub Presentations](https://github.com/kenbod/markdown_github_01/blob/master/Strategies.md) or
+head back to the [Table of Contents](https://github.com/kenbod/markdown_github_01/blob/master/README.md).
+

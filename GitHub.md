@@ -99,6 +99,17 @@ Things to note:
 * `git branch -a` is used to list all branches including the ones on our remote
 * We have a local branch called “bug-fix” that did NOT get copied to the remote
 
+## Establishing the Link
+
+* `git clone`
+
+    * When you clone a repository, it automatically creates a local branch for each remote branch and sets up a <q>tracking relationship</q> between them.
+        * A local branch that <q>tracks</q> a remote branch will allow `git pull` commands to copy commits from the remote branch that were added in some other way (typically by being pushed to that branch by one of your collaborators)
+
+* `git push -u <repo> <refspec>`
+    * This is the other way to establish a link between a local branch and a remote one; in this case, you're
+    simultaneously pushing the contents of a local branch (thus creating the branch on the remote repository) and
+    setting up the tracking relationship
 
 
 

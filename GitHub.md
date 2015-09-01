@@ -104,9 +104,11 @@ Things to note:
 * `git clone`
 
     * When you clone a repository, it automatically creates a local branch for each remote branch and sets up a <q>tracking relationship</q> between them.
+
         * A local branch that <q>tracks</q> a remote branch will allow `git pull` commands to copy commits from the remote branch that were added in some other way (typically by being pushed to that branch by one of your collaborators)
 
 * `git push -u <repo> <refspec>`
+
     * This is the other way to establish a link between a local branch and a remote one; in this case, you're
     simultaneously pushing the contents of a local branch (thus creating the branch on the remote repository) and
     setting up the tracking relationship
@@ -133,9 +135,32 @@ Putting it all together
 * This command means that we want to push the contents of the `master` branch of MY repository to the `master` branch of the remote repository (creating the branch, if needed) AND set up a tracking relationship between them.
 * After we set-up the tracking relationship, we can push new commits to the remote copy of the master branch using any of these commands
 
-    * git push origin master:master
-    * git push origin master
-    * git push
+```
+git push origin master:master
+git push origin master
+git push
+```
 
 The last command assumes that your current branch is `master`.
 
+## Pull before you Push
+
+If you have new commits that you want to push to the remote but someone else already pushed THEIR new commits to the remote, you will need to pull them in first using ANY of these commands:
+
+    git pull origin master
+    git pull
+
+`git pull` is a <q>short cut</q> in that it does the following:
+
+    git fetch <args>: pulling down the latest info about the remote
+    git merge <remote-branch>: this merges the changes of the remote branch into your current local branch
+
+As a result, if you just want to pull changes from the remote repository but not modify any of your branches just yet, you can just issue a `git fetch` command and then do any merging into branches yourself.
+
+Regardless, once you have pulled, you can resolve any conflicts that might have popped up and then you can push your own commits to the remote branch
+
+Finally, going back to our example, if we want our `bug-fix` branch from our local repository to be stored on the remote, then we can just push it using the same command that we did before. Here's how:
+
+    git checkout bug-fix
+    git push                   <== fails, because remote branch doesn’t exist yet
+    git push -u origin bug-fix <== works!

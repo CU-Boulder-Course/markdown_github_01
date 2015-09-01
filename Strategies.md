@@ -41,3 +41,34 @@ I did this last year for one of my seminars:
 * Website: <https://cu-data-engineering-s15.github.io/lecture_05/>
 
 ## Option 3: Why not Both?
+
+If you have a topic that requires both text AND code, then you can combine both strategies. You store code, data, resources, and instructions in the `master` branch of the repo and you store HTML, CSS, and Javascript in the repo on the `gh-pages` branch.
+
+To take advantage of this approach, follow these (high-level) steps:
+
+1. create a new repo and associate it with GitHub
+2. on the `master` branch, fill it with code and markdown files
+3. `git checkout -b gh-pages`
+4. `git rm <everything>`; `git commit`
+5. Now, fill the `gh-pages` branch with HTML, CSS, and Javascript
+6. Switch between the two branches to work on code (`master`) and your website (`gh-pages`) until done
+7. `git push` frequently to view repo/website as it evolves on GitHub
+
+Note: step 4 creates an empty working directory on the gh-pages branch. It will consist of multiple calls to the `git rm` command until everything in the working directory has been deleted, followed by a `git commit` to give the `gh-pages` branch a new starting point.
+
+This might seem scary, but it's not. All of those files are safe on the `master` branch. Just enter `git checkout master` to see them again and then `git checkout gh-pages` to go back to the empty directory so you can start working on your website.
+
+## Examples
+
+I have created two examples to view associated with my Github account.
+
+The first is this lecture presented with Markdown files on the master branch of this repository. (You're looking at it now!)
+
+Option 1: https://github.com/kenbod/markdown_github_01
+
+The second is this lecture presented, again, as a website on the gh-pages branch of the same repository.
+
+Option 2: https://kenbod.github.io/markdown_github_01
+
+A <q>code heavy</q> example is left as an exercise for the reader.
+

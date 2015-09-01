@@ -8,4 +8,5 @@ Table of Contents
 2. [Markdown](https://github.com/kenbod/markdown_github_01/blob/master/Markdown.md)
 3. [Markdown Basics](https://github.com/kenbod/markdown_github_01/blob/master/MarkdownBasics.md)
 4. [GitHub](https://github.com/kenbod/markdown_github_01/blob/master/GitHub.md)
-5. Wrapping Up
+5. [Strategies for Presentations](https://github.com/kenbod/markdown_github_01/blob/master/Strategies.md)
+6. [Wrapping Up](https://github.com/kenbod/markdown_github_01/blob/master/WrappingUp.md)

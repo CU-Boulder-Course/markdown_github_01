@@ -37,7 +37,7 @@ then your website will automatically appear at
 
 I did this last year for one of my seminars:
 
-    Repo: <https://github.com/cu-data-engineering-s15/lecture_05>
-    Website: <https://cu-data-engineering-s15.github.io/lecture_05/>
+* Repo: <https://github.com/cu-data-engineering-s15/lecture_05>
+* Website: <https://cu-data-engineering-s15.github.io/lecture_05/>
 
 ## Option 3: Why not Both?

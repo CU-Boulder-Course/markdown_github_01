@@ -1,79 +1,108 @@
-# Strategies for Using GitHub Presentations
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Markdown &amp; GitHub</title>
+    <link href="lib/css/bootstrap.css" rel="stylesheet">
+    <link href="lib/css/bootstrap-theme.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3">&nbsp;</div>
+        <div class="col-lg-6">
+          <h1>Strategies for Using GitHub Presentations</h1>
 
-## Overview
+          <h2>Overview</h2>
 
-There are three basic approaches for creating your presentations in GitHub.
+          <p>There are three basic approaches for creating your presentations in GitHub.</p>
 
-1. Create a repo that contains both code and Markdown files. The Markdown files act as your presentation.
-2. Create a repo that uses the `gh-pages` branch to create a website that GitHub serves
-3. Create a repo with both code and Markdown files in the `master` branch and a website in the `gh-pages` branch
+          <ol>
+            <li>Create a repo that contains both code and Markdown files. The Markdown files act as your presentation.</li>
+            <li>Create a repo that uses the <code>gh-pages</code> branch to create a website that GitHub serves</li>
+            <li>Create a repo with both code and Markdown files in the <code>master</code> branch and a website in the <code>gh-pages</code> branch</li>
+          </ol>
 
-## Option 1: Markdown/Code in `master` branch
+          <h2>Option 1: Markdown/Code in <code>master</code> branch</h2>
 
-If you pick a topic that requires writing a lot of code, then you can use `git` to create a repo with a `master` branch. Your repo would have a top-level directory that contained a `README.md` file, a `src` directory and a `docs` directory to contain a Markdown-based presentation. You might have other top level directories that contain data, resources, and other information (such as installation instructions).
+          <p>If you pick a topic that requires writing a lot of code, then you can use <code>git</code> to create a repo with a <code>master</code> branch. Your repo would have a top-level directory that contained a <code>README.md</code> file, a <code>src</code> directory and a <code>docs</code> directory to contain a Markdown-based presentation. You might have other top level directories that contain data, resources, and other information (such as installation instructions).</p>
 
-Say you decided to do a presentation on _Functional Programming in Scala_ and how Scala and the functional programming paradigm can help software engineers write better code. You can create sub-directories under the `src` directory for each of your Scala-based examples. You can create a set of Markdown files in the `docs` directory that presents your information on Scala and functional program and uses Markdown code-blocks to present your Scala code examples. Your `README.md` might then contain pointers and instructions on how to install Scala and how to run the various code examples.
+          <p>Say you decided to do a presentation on <em>Functional Programming in Scala</em> and how Scala and the functional programming paradigm can help software engineers write better code. You can create sub-directories under the <code>src</code> directory for each of your Scala-based examples. You can create a set of Markdown files in the <code>docs</code> directory that presents your information on Scala and functional program and uses Markdown code-blocks to present your Scala code examples. Your <code>README.md</code> might then contain pointers and instructions on how to install Scala and how to run the various code examples.</p>
 
-You would have your repo on your local machine and on GitHub. You might work on the code on your machine and do frequent commits and uploads to GitHub (via `git push`). You might then switch to working on the Markdown using GitHub's markdown editor, making frequent commits on-line. You would then update your local repo with `git pull` to keep it consistent.
+          <p>You would have your repo on your local machine and on GitHub. You might work on the code on your machine and do frequent commits and uploads to GitHub (via <code>git push</code>). You might then switch to working on the Markdown using GitHub's markdown editor, making frequent commits on-line. You would then update your local repo with <code>git pull</code> to keep it consistent.</p>
 
-## Option 2: Website in `gh-pages` branch
+          <h2>Option 2: Website in <code>gh-pages</code> branch</h2>
 
-If your presentation has no code but lots of text and images, then you can create a repo that takes advantage of GitHub's ability to associate a website with a given repo.
+          <p>If your presentation has no code but lots of text and images, then you can create a repo that takes advantage of GitHub's ability to associate a website with a given repo.</p>
 
-To take advantage of this functionality, follow these (high-level) steps:
+          <p>To take advantage of this functionality, follow these (high-level) steps:</p>
 
-* create a new repo and associate it with GitHub
-* `git checkout -b gh-pages` (you will never use the `master` branch again)
-* add HTML, CSS, and Javascript to your repo
-* `git push -u origin gh-pages`
+          <ul>
+            <li>create a new repo and associate it with GitHub</li>
+            <li><code>git checkout --orphan gh-pages</code> (you will never use the <code>master</code> branch again)</li>
+            <li>add HTML, CSS, and Javascript to your repo</li>
+            <li><code>git push -u origin gh-pages</code></li>
+          </ul>
 
-If your repo is stored at
+          <p>If your repo is stored at</p>
 
-    https://github.com/<USER>/<REPO>
+          <code>https://github.com/&lt;USER&gt;/&lt;REPO&gt;</code>
 
-then your website will automatically appear at 
+          <p>then your website will automatically appear at</p>
 
-    https://<USER>.github.io/<REPO>/
+          <code>https://&lt;USER&gt;.github.io/&lt;REPO&gt;/</code>
 
-I did this last year for one of my seminars:
+          <p>I did this last year for one of my seminars:</p>
 
-* Repo: <https://github.com/cu-data-engineering-s15/lecture_05>
-* Website: <https://cu-data-engineering-s15.github.io/lecture_05/>
+          <ul>
+            <li>Repo: &lt;https://github.com/cu-data-engineering-s15/lecture_05&gt;</li>
+            <li>Website: &lt;https://cu-data-engineering-s15.github.io/lecture_05/&gt;</li>
+          </ul>
 
-## Option 3: Why not Both?
+          <h2>Option 3: Why not Both?</h2>
 
-If you have a topic that requires both text AND code, then you can combine both strategies. You store code, data, resources, and instructions in the `master` branch of the repo and you store HTML, CSS, and Javascript in the repo on the `gh-pages` branch.
+          <p>If you have a topic that requires both text AND code, then you can combine both strategies. You store code, data, resources, and instructions in the <code>master</code> branch of the repo and you store HTML, CSS, and Javascript in the repo on the <code>gh-pages</code> branch.</p>
 
-To take advantage of this approach, follow these (high-level) steps:
+          <p>To take advantage of this approach, follow these (high-level) steps</p>
 
-1. create a new repo and associate it with GitHub
-2. on the `master` branch, fill it with code and markdown files
-3. `git checkout -b gh-pages`
-4. `git rm <everything>`; `git commit`
-5. Now, fill the `gh-pages` branch with HTML, CSS, and Javascript
-6. Switch between the two branches to work on code (`master`) and your website (`gh-pages`) until done
-7. `git push` frequently to view repo/website as it evolves on GitHub
+          <ol>
+            <li>create a new repo and associate it with GitHub</li>
+            <li>on the <code>master</code> branch, fill it with code and markdown files</li>
+            <li><code>git checkout --orphan gh-pages</code></li>
+            <li><code>git rm -rf .</code>; <code>git commit</code></li>
+            <li>Now, fill the <code>gh-pages</code> branch with HTML, CSS, and Javascript</li>
+            <li>Switch between the two branches to work on code (<code>master</code>) and your website (<code>gh-pages</code>) until done</li>
+            <li><code>git push</code> frequently to view repo/website as it evolves on GitHub</li>
+          </ol>
 
-Note: step 4 creates an empty working directory on the gh-pages branch. It will consist of multiple calls to the `git rm` command until everything in the working directory has been deleted, followed by a `git commit` to give the `gh-pages` branch a new starting point.
+          <p>Note: step 4 creates an empty working directory on the gh-pages branch. It will consist of multiple calls to the <code>git rm</code> command until everything in the working directory has been deleted, followed by a <code>git commit</code> to give the <code>gh-pages</code> branch a new starting point.</p>
 
-This might seem scary, but it's not. All of those files are safe on the `master` branch. Just enter `git checkout master` to see them again and then `git checkout gh-pages` to go back to the empty directory so you can start working on your website.
+          <p>This might seem scary, but it's not. All of those files are safe on the <code>master</code> branch. Just enter <code>git checkout master</code> to see them again and then <code>git checkout gh-pages</code> to go back to the empty directory so you can start working on your website.</p>
 
-## Examples
+          <h2>Examples</h2>
 
-I have created two examples to view associated with my Github account.
+          <p>I have created two examples to view associated with my Github account.</p>
 
-The first is this lecture presented with Markdown files on the master branch of this repository. (You're looking at it now!)
+          <p>The first is this lecture presented with Markdown files on the master branch of this repository.</p>
 
-Option 1: https://github.com/kenbod/markdown_github_01
+          <p>Option 1: <a href="https://github.com/kenbod/markdown_github_01">https://github.com/kenbod/markdown_github_01</a></p>
 
-The second is this lecture presented, again, as a website on the gh-pages branch of the same repository.
+          <p>The second is this lecture presented, again, as a website on the gh-pages branch of the same repository. (You're looking at it now!)</p>
 
-Option 2: https://kenbod.github.io/markdown_github_01
+          <p>Option 2: <a href="https://kenbod.github.io/markdown_github_01">https://kenbod.github.io/markdown_github_01</a></p>
 
-A <q>code heavy</q> example is left as an exercise for the reader.
+          <p>A <q>code heavy</q> example is left as an exercise for the reader.</p>
 
-## Next Steps
+          <h2>Next Steps</h2>
 
-Next up, head to the [Wrapping Up](https://github.com/kenbod/markdown_github_01/blob/master/WrappingUp.md) page or
-head back to the [Table of Contents](https://github.com/kenbod/markdown_github_01/blob/master/README.md).
+          <p>Next up, head to the <a href="wrapping_up.html">Wrapping Up</a> page or head back to the <a href="index.html">Table of Contents</a>.</p>
 
+        </div>
+        <div class="col-lg-3">&nbsp;</div>
+      </div>
+    </div>
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+  </body>
+</html>

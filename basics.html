@@ -13,36 +13,37 @@
         <div class="col-lg-3">&nbsp;</div>
         <div class="col-lg-6">
 <h1>The Basics</h1>
-In this section, we present the syntax of Markdown.
+
+<p>In this section, we present the syntax of Markdown.</p>
 
 <h2>Paragraphs</h2>
 
-A paragraph is one or more consecutive lines of text. To create a new paragraph, separate it from the previous paragraph with a blank line. When converting to HTML, the text of the paragraph is wrapped in a **p** tag.
+<p>A paragraph is one or more consecutive lines of text. To create a new paragraph, separate it from the previous paragraph with a blank line. When converting to HTML, the text of the paragraph is wrapped in a <strong>p</strong> tag.</p>
 
 <hr>
 
 <h3>Example:</h3>
 
-```
+<pre><code>
 This is a paragraph in Markdown format.
 This line will be merged with the previous one.
 
 This is the start of a new paragraph.
-```
+</code></pre>
+
 <h3>Result:</h3>
 
-This is a paragraph in Markdown format.
-This line will be merged with the previous one.
+<p>This is a paragraph in Markdown format.
+This line will be merged with the previous one.</p>
 
-This is the start of a new paragraph.
+<p>This is the start of a new paragraph.</p>
 
 <hr>
 
 <h2>Headings</h2>
 
-You can specify headings in one of two ways; I'll cover just one of them. To specify that a line
-is a heading, start it with a hash mark (#). A heading line can start with 1 to 6 hash marks, corresponding
-to HTML's **h1**, **h2**, **h3**, **h4**, **h5**, and **h6** tags.
+<p>You can specify headings in one of two ways; I'll cover just one of them. To specify that a line is a heading, start it with a hash mark (#). A heading line can start with 1 to 6 hash marks, corresponding
+to HTML's <strong>h1</strong>, <strong>h2</strong>, <strong>h3</strong>, <strong>h4</strong>, <strong>h5</strong>, and <strong>h6</strong> tags.</p>
 
 <hr>
 
@@ -108,13 +109,13 @@ symbol. Blockquotes can be nested and can contain other markdown elements.
 
 <h2>Emphasis</h2>
 
-To emphasize a phrase, surround it with asterisks or underscores. If you strongly want to emphasize something, then double the symbols. In HTML, the former will be translated to an **em** tag; the latter as a **strong** tag. By convention, **em** tags appear in *italics* while **strong** tags appear in **bold**.
+<p>To emphasize a phrase, surround it with asterisks or underscores. If you strongly want to emphasize something, then double the symbols. In HTML, the former will be translated to an <strong>em</strong> tag; the latter as a <strong>strong</strong> tag. By convention, <strong>em</strong> tags appear in *italics* while <strong>strong</strong> tags appear in <strong>bold</strong>.</p>
 
 <hr>
 
 <h3>Example:</h3>
 
-```
+<pre><code>
 I *really* want you to be there
 
 No, I _really_ do.
@@ -122,32 +123,29 @@ No, I _really_ do.
 Listen, I **really** want you to be there
 
 I'm __not__ kidding.
-```
+</code></pre>
+
 <h3>Result:</h3>
 
-I *really* want you to be there
+<p>I <em>really</em> want you to be there</p>
 
-No, I _really_ do.
+<p>No, I <em>really</em> do.</p>
 
-Listen, I **really** want you to be there
+<p>Listen, I <strong>really</strong> want you to be there</p>
 
-I'm __not__ kidding.
+<p>I'm <strong>not</strong> kidding.</p>
 
 <hr>
 
 <h2>Lists</h2>
 
-You can create two types of lists (just like in HTML). For an unordered list, start each line with an
-asterisk (*), a plus (+), or a dash (-), followed by a space and then the content of the list item. For
-ordered lists, start each line with a number followed by a period and a space. It doesn't matter what
-numbers you use, Markdown will convert it to an HTML ordered list and the browser will take care of
-actually numbering the list.
+<p>You can create two types of lists (just like in HTML). For an unordered list, start each line with an asterisk (*), a plus (+), or a dash (-), followed by a space and then the content of the list item. For ordered lists, start each line with a number followed by a period and a space. It doesn't matter what numbers you use, Markdown will convert it to an HTML ordered list and the browser will take care of actually numbering the list.</p>
 
 <hr>
 
 <h3>Example:</h3>
 
-```
+<pre><code>
 * This is a list
 
 * Items can have
@@ -165,40 +163,43 @@ Here's the start of a new paragraph
 1. Here's an ordered list that follows
 2. with multiple items
 3. as many as you need
-```
+</code></pre>
+
 <h3>Result:</h3>
 
-* This is a list
+<ul>
+  <li><p>This is a list</p></li>
 
-* Items can have
+  <li><p>Items can have</p>
 
-    multiple paragraphs
+    <p>multiple paragraphs
     if you need them
-    just indent by four spaces
+    just indent by four spaces</p>
 
-    and have blank lines between items
+    <p>and have blank lines between items</p></li>
 
-* Here's the end of the list
+  <li>Here's the end of the list</li>
+</ul>
 
-Here's the start of a new paragraph
+<p>Here's the start of a new paragraph</p>
 
-1. Here's an ordered list that follows
-2. with multiple items
-3. as many as you need
+<ol>
+  <li>Here's an ordered list that follows</li>
+  <li>with multiple items</li>
+  <li>as many as you need</li>
+</ol>
 
 <hr>
 
 <h2>Embedded Lists</h2>
 
-You can embed one list inside another, as many levels deep as you need (within reason). Just prefix each level
-with four spaces in front of the list marker. Level 1 is a normal list. Level 2 lists have four spaces at the
-start of their lines. Level 3 lists have eight spaces at the start of their lines, etc.
+<p>You can embed one list inside another, as many levels deep as you need (within reason). Just prefix each level with four spaces in front of the list marker. Level 1 is a normal list. Level 2 lists have four spaces at the start of their lines. Level 3 lists have eight spaces at the start of their lines, etc.</p>
 
 <hr>
 
 <h3>Example:</h3>
 
-```
+<pre><code>
 * This is a list
     * This is an embedded list
         1. that is indicated by adding
@@ -206,16 +207,25 @@ start of their lines. Level 3 lists have eight spaces at the start of their line
     * Go as deep as you need.
 * This is the second item of the outer list
 * And this is the third item
-```
+</code></pre>
+
 <h3>Result:</h3>
 
-* This is a list
-    * This is an embedded list
-        1. that is indicated by adding
-        2. four spaces in front of the list marker
-    * Go as deep as you need.
-* This is the second item of the outer list
-* And this is the third item
+<ul>
+  <li>This is a list
+    <ul>
+      <li>This is an embedded list
+        <ol>
+          <li>that is indicated by adding</li>
+          <li>four spaces in front of the list marker</li>
+        </ol>
+      </li>
+      <li>Go as deep as you need.</li>
+    </ul>
+  </li>
+  <li>This is the second item of the outer list</li>
+  <li>And this is the third item</li>
+</ul>
 
 <hr>
 
@@ -227,7 +237,7 @@ You can have <q>code</q> elements either in-line or in a stand-alone block. In-l
 
 <h3>Example:</h3>
 
-```
+<pre><code>
 Be sure to call the `init()` method before you call `doMyWorkForMe()`.
 
 Also be sure to review this code for me.
@@ -239,21 +249,23 @@ Also be sure to review this code for me.
     }
 
 Thanks!
-```
+</code></pre>
 
 <h3>Result:</h3>
 
-Be sure to call the `init()` method before you call `doMyWorkForMe()`.
+<p>Be sure to call the <code>init()</code> method before you call <code>doMyWorkForMe()</code>.</p>
 
-Also be sure to review this code for me.
+<p>Also be sure to review this code for me.</p>
 
+<pre><code>
     def check(dir: Path) = {
       if (!exists(dir)) {
         error(s"Directory: <$dir> does not exist.")
       }
     }
+</code></pre>
 
-Thanks!
+<p>Thanks!</p>
 
 <hr>
 
@@ -268,11 +280,11 @@ They also increase the accessibility of your page as they can be processed by sc
 
 <h3>Example:</h3>
 
-```
+<pre><code>
 Check out [GitUp](http://gitup.co) for a cool way to view git repos.
 
 Check out [GitUp](http://gitup.co "It's cool!") for a cool way to view git repos.
-```
+</code></pre>
 
 <h3>Result:</h3>
 

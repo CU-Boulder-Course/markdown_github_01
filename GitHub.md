@@ -126,5 +126,16 @@ The `<refspec>` argument is a placeholder for this beast: `(+)<src_ref>:<dst_ref
 in our case, `master:master`
 * If you don’t specify the `<refspec>`, your current branch is assumed
 
+Putting it all together
 
+    git push -u origin master
+
+* This command means that we want to push the contents of the `master` branch of MY repository to the `master` branch of the remote repository (creating the branch, if needed) AND set up a tracking relationship between them.
+* After we set-up the tracking relationship, we can push new commits to the remote copy of the master branch using any of these commands
+
+    * git push origin master:master
+    * git push origin master
+    * git push
+
+The last command assumes that your current branch is `master`.
 
